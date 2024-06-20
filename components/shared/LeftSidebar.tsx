@@ -16,7 +16,6 @@ function LeftSideBar() {
                 {sidebarLinks.map((link) => {
                     const isActive = (pathname.includes(link.route) && link.route.length> 1 ) ||
                                         pathname === link.route;
-
                     return (
                         <Link 
                             href={link.route}
@@ -37,7 +36,6 @@ function LeftSideBar() {
             </div>
             <div className='mt-10 px-6 gap-4 p-4'>
             <SignedIn>
-                        <SignOutButton>
                             <div className="flex cursor-pointer" onClick={() => signOut({ redirectUrl: '/sign-in' })}>
                                 <Image
                                 src="/assets/logout.svg"
@@ -47,7 +45,6 @@ function LeftSideBar() {
                                 />
                                 <p className='text-light-2 max-lg-hidden'>Logout</p>
                             </div >
-                        </SignOutButton>
                     </SignedIn>
             </div>
         </section>
