@@ -24,7 +24,7 @@ async function Page() {
                 <section className="mt-9 bg-dark-2 p-10">
                     <AccountProfile 
                     user={userData}
-                    btnTitle= 
+                    btnTitle= ''
                     />
                 </section>
         </main>
