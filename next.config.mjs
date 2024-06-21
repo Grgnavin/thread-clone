@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
-    serverActions: true,
     serverComponentsExternalPackages: ["mongoose"],
         },
             images: {
@@ -23,9 +22,9 @@ const nextConfig = {
                 hostname: "placehold.co",
             },
         ],
+    },
         typescript: {
             ignoreBuildErrors: true,
-        },
         },
     };
 

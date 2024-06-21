@@ -10,6 +10,11 @@ function LeftSideBar() {
     const pathname = usePathname();
     const { signOut } = useClerk();
 
+    const RedirectToSignin =async () => {
+        router.replace('/sign-in')
+        await signOut();
+    }
+
     return (
         <section className="custom-scrollbar leftsidebar">
             <div className="flex w-full flex-col gap-6 px-6">
@@ -36,7 +41,7 @@ function LeftSideBar() {
             </div>
             <div className='mt-10 px-6 gap-4 p-4'>
             <SignedIn>
-                            <div className="flex cursor-pointer" onClick={() => signOut({ redirectUrl: '/sign-in' })}>
+                            <div className="flex cursor-pointer" onClick={RedirectToSignin}>
                                 <Image
                                 src="/assets/logout.svg"
                                 alt="logout"
